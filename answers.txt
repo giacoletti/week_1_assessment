@@ -1,0 +1,74 @@
+1 - Ruby variable:
+my_var = 'variable'
+
+Data types in Ruby:
+Array, Hash, Numbers, Symbol, Boolean, String
+
+my_hash = { name: 'Giovanni', age: 29 }
+my_array = [1,2,3,4,5,6]
+
+array_hashes = [{ name: 'Thomas', age: 49 }, { name: 'Love', age: 34 }]
+
+my_symbol = :active
+
+my_boolean = true
+my_boolean_2 = false
+
+2 - Arrays and Hashes
+
+➜  week_1_assessment irb
+3.0.0 :001 > giovanni_car = {wheels: 30, max_speed: 200, color: 'black'}
+ => {:wheels=>30, :max_speed=>200, :color=>"black"} 
+3.0.0 :002 > carlo_car = { wheels: 29, max_speed: 150, color:'white'}
+ => {:wheels=>29, :max_speed=>150, :color=>"white"} 
+3.0.0 :003 > my_parking_lot = [giovanni_car, carlo_car]
+ => 
+[{:wheels=>30, :max_speed=>200, :color=>"black"},
+... 
+3.0.0 :004 > my_parking_lot
+ => 
+[{:wheels=>30, :max_speed=>200, :color=>"black"},
+ {:wheels=>29, :max_speed=>150, :color=>"white"}] 
+3.0.0 :005 > my_parking_lot[1]
+ => {:wheels=>29, :max_speed=>150, :color=>"white"} 
+3.0.0 :006 > my_parking_lot[1][:color]
+ => "white" 
+
+3 - Classes and Methods
+
+➜  week_1_assessment irb
+3.0.0 :001 > require './cars/car.rb'
+ => true 
+3.0.0 :002 > my_car = Car.new
+ => #<Car:0x000055989e68c3b0> 
+3.0.0 :003 > my_car
+ => #<Car:0x000055989e68c3b0> 
+3.0.0 :004 > my_car.color
+ => nil 
+3.0.0 :005 > my_car.color = 'black'
+ => "black" 
+3.0.0 :006 > my_car
+ => #<Car:0x000055989e68c3b0 @color="black"> 
+3.0.0 :007 > my_car.color
+ => "black" 
+
+4 - RSpec
+
+- touch Gemfile
+
+inside Gemfile :
+
+source 'https://rubygems.org/'
+
+gem 'rspec'
+
+- bundle install
+
+- rspec --init
+
+The Test Driven Development make us write our tests first and the implementation later.
+This way it allows us to deliver better quality code, in the long run making less bugs in our code and at the same time
+we can describe our code, what is supposed to do.
+
+Final step - Submission
+
